@@ -1,0 +1,77 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+  height: 100px;
+  padding: 0 1.5rem;
+  background: var(--color-gray-light) url('/lions-logo.png') 1.5rem center no-repeat;
+  background-size: 80px;
+}
+
+.list {
+  list-style: none;
+  margin: 0 auto 0 130px;
+  padding-left: unset;
+  display: flex;
+  font-size: 12px;
+}
+
+.dropdown {
+  list-style: none;
+  margin: unset;
+  padding: 1.5rem;
+  position: absolute;
+  min-width: 300px;
+  top: 100%;
+  left: -1.5rem;
+  background-color: var(--color-white);
+  white-space: nowrap;
+  display: none;
+}
+
+.dropdown .item {
+  margin-right: unset;
+  width: max-content;
+}
+
+.dropdown .item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.item {
+  margin-right: 2.5rem;
+  position: relative;
+}
+
+.item:last-child {
+  margin-left: auto;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0px;
+  height: 4px;
+  overflow: hidden;
+  background-color: var(--color-blue);
+  transition: width 0.2s ease-out;
+}
+
+.item:hover::before {
+  width: 100%;
+}
+
+.item:hover .dropdown {
+  display: block;
+}
+
+.title {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
