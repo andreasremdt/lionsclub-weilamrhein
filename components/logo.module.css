@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: max-content;
+
+  font-weight: bold;
+
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.small {
+  padding-left: 55px;
+  height: 40px;
+
+  font-size: 18px;
+
+  background-size: 40px;
+}
+
+.big {
+  padding-left: 90px;
+  height: 80px;
+
+  font-size: 24px;
+
+  background-size: 80px;
+}
+
+.light {
+  background-image: url('/lions-logo-white.png');
+}
+
+.dark {
+  background-image: url('/lions-logo.png');
+}

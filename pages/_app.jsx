@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Navigation from '../components/navigation';
+import Footer from '../components/footer';
 import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
@@ -14,9 +15,10 @@ function App({ Component, pageProps }) {
         />
       </Head>
       <Navigation />
-      <main className="container">
+      <div className="container">
         <Component {...pageProps} />
-      </main>
+      </div>
+      <Footer />
     </>
   );
 }
