@@ -1,0 +1,24 @@
+.wrapper {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.entry {
+  margin-right: 2rem;
+  position: relative;
+  color: var(--color-blue);
+}
+
+.entry:hover {
+  text-decoration: underline;
+}
+
+.entry::after {
+  content: '/';
+  position: absolute;
+  right: -1.2rem;
+  top: 0;
+  color: var(--color-black);
+  line-height: 1.2;
+}
