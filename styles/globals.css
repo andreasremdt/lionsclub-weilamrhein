@@ -69,12 +69,3 @@ p {
   margin: auto;
   padding: 0 1.5rem;
 }
-
-.card {
-  background-color: var(--color-white);
-  padding: 3rem 7rem;
-}
-
-.card:not(:last-child) {
-  margin-bottom: 3rem;
-}

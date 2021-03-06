@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Card from '../../components/card';
 import styles from '../../styles/About.module.css';
 
 export default function Page() {
@@ -9,7 +10,7 @@ export default function Page() {
         <title>Über Uns | Lions Club Weil am Rhein</title>
       </Head>
 
-      <main className="card">
+      <Card Tag="main">
         <h1>Über Uns</h1>
         <p>
           Unser Club hat sich 2006 gegründet. Wir treffen uns zwei Mal im Monat. Wir fühlen uns dem
@@ -20,9 +21,9 @@ export default function Page() {
           der unterschiedlichsten Berufe – von Unternehmern über Ärzte bis zu Lehrern. Stolz sind
           wir auch auf unsere „Leos“, den sehr aktiven Clubnachwuchs.
         </p>
-      </main>
+      </Card>
 
-      <section className="card">
+      <Card>
         <h2>Unser Vorstand</h2>
 
         <div className={styles.members}>
@@ -61,11 +62,11 @@ export default function Page() {
             <p className={styles.location}>Weil am Rhein, Deutschland</p>
           </article>
         </div>
-      </section>
+      </Card>
 
-      <section className="card">
+      <Card>
         <h2>Unsere Mitglieder</h2>
-      </section>
+      </Card>
     </>
   );
 }
