@@ -1,7 +1,6 @@
 .button {
-  font-family: inherit;
+  font: inherit;
   font-weight: bold;
-  font-size: 19px;
   background-color: var(--color-blue);
   color: var(--color-white);
   border-radius: 5px;
