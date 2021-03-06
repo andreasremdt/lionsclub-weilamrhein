@@ -4,7 +4,7 @@ import styles from './navigation.module.css';
 
 export default function Navigation() {
   return (
-    <nav className={styles.wrapper}>
+    <nav className={[styles.wrapper, 'container'].join(' ')}>
       <ul className={styles.list}>
         <li className={styles.item}>
           <Link href="/">

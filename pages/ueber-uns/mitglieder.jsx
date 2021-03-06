@@ -4,9 +4,9 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Clubmitglieder</title>
+        <title>Unsere Mitglieder | Lions Club Weil am Rhein</title>
       </Head>
-      <h1>Clubmitglieder</h1>
+      <h1 className="page-title">Clubmitglieder</h1>
     </>
   );
 }
