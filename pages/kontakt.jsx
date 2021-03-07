@@ -4,6 +4,7 @@ import Card from '../components/card';
 import Button from '../components/button';
 import Breadcrumbs from '../components/breadcrumbs';
 import Input from '../components/input';
+import Title from '../components/title';
 import styles from './kontakt.module.css';
 
 const Page = () => {
@@ -33,7 +34,7 @@ const Page = () => {
           ]}
         />
 
-        <h1>Schreiben Sie Uns</h1>
+        <Title>Schreiben Sie Uns</Title>
         <p>
           Haben Sie Fragen, Ideen, Vorschläge oder möchten einfach mit uns in Kontakt treten? Nutzen
           Sie dazu gerne das Formular auf dieser Seite oder schreiben Sie uns direkt an{' '}
@@ -47,7 +48,7 @@ const Page = () => {
         {isSent && (
           <div role="alert" className={styles.confirmation}>
             <img src="/email-sent.svg" width="300" />
-            <h3>Vielen Dank!</h3>
+            <Title Tag="h3">Vielen Dank!</Title>
             <p className={styles['confirmation-text']}>Ihre Nachricht wurde versendet.</p>
           </div>
         )}
