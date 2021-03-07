@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.list {
+  list-style: none;
+  margin: unset;
+  padding-left: unset;
+  flex: 0 0 50%;
+}
+
+.item {
+  margin-bottom: 0.4rem;
+}
+
+.title {
+  display: block;
+}
+
+.heading {
+  margin-top: 1rem;
+}
+
+.heading:first-of-type {
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: block;
+  }
+}
