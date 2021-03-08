@@ -1,5 +1,6 @@
 .base {
   margin: unset;
+  line-height: 1.2;
 }
 
 .h1 {
@@ -15,6 +16,10 @@
   font-size: 24px;
 }
 
+.h5 {
+  font-size: 18px;
+}
+
 .underline {
   position: relative;
 }
@@ -27,4 +32,20 @@
   width: 4rem;
   height: 4px;
   background-color: var(--color-yellow);
+}
+
+.inverted {
+  color: var(--color-white);
+}
+
+@media (max-width: 1000px) {
+  .h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 800px) {
+  .h1 {
+    font-size: 44px;
+  }
 }
