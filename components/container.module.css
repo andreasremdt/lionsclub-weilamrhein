@@ -1,0 +1,6 @@
+.main {
+  width: 90rem;
+  width: clamp(16rem, 90vw, 80rem);
+  margin: auto;
+  padding: 0 1.5rem;
+}

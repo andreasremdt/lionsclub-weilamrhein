@@ -15,9 +15,7 @@ function App({ Component, pageProps }) {
         />
       </Head>
       <Navigation />
-      <div className="container">
-        <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
       <Footer />
     </>
   );

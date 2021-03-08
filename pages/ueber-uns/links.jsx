@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Card from '../../components/card';
 import Breadcrumbs from '../../components/breadcrumbs';
 import Title from '../../components/title';
+import Container from '../../components/Container';
 import styles from './links.module.css';
 
 const lionsLinks = [
@@ -79,58 +80,60 @@ const Page = () => (
     <Head>
       <title>Links</title>
     </Head>
-    <Card Tag="main">
-      <Breadcrumbs
-        entries={[
-          { href: '/', title: 'Startseite' },
-          { href: '/ueber-uns/', title: 'Über Uns' },
-          { href: '/ueber-uns/links/', title: 'Links zu anderen Seiten' },
-        ]}
-      />
+    <Container>
+      <Card Tag="main">
+        <Breadcrumbs
+          entries={[
+            { href: '/', title: 'Startseite' },
+            { href: '/ueber-uns/', title: 'Über Uns' },
+            { href: '/ueber-uns/links/', title: 'Links zu anderen Seiten' },
+          ]}
+        />
 
-      <Title>Links</Title>
-      <p>
-        Wir pflegen eine Zusammenarbeit mit mehreren regionalen Lions Clubs sowie dem Leo Club Weil
-        am Rhein. Hier finden Sie eine kleine Auswahl an Verknüpfungen zu diesen und anderen
-        Vereinen sowie Projekte und Adressen, die uns am Herzen liegen.
-      </p>
-    </Card>
+        <Title>Links</Title>
+        <p>
+          Wir pflegen eine Zusammenarbeit mit mehreren regionalen Lions Clubs sowie dem Leo Club
+          Weil am Rhein. Hier finden Sie eine kleine Auswahl an Verknüpfungen zu diesen und anderen
+          Vereinen sowie Projekte und Adressen, die uns am Herzen liegen.
+        </p>
+      </Card>
 
-    <Card>
-      <Title Tag="h2" underline>
-        Lions & Leo Clubs
-      </Title>
+      <Card>
+        <Title Tag="h2" underline>
+          Lions & Leo Clubs
+        </Title>
 
-      <ul className={styles.list}>
-        {lionsLinks.map((link) => (
-          <li key={link.url}>
-            <Link href={link.url}>
-              <a className={styles.link} target="_blank" rel="noopener nofollow">
-                {link.title}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </Card>
+        <ul className={styles.list}>
+          {lionsLinks.map((link) => (
+            <li key={link.url}>
+              <Link href={link.url}>
+                <a className={styles.link} target="_blank" rel="noopener nofollow">
+                  {link.title}
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Card>
 
-    <Card>
-      <Title Tag="h2" underline>
-        Sonstige
-      </Title>
+      <Card>
+        <Title Tag="h2" underline>
+          Sonstige
+        </Title>
 
-      <ul className={styles.list}>
-        {otherLinks.map((link) => (
-          <li key={link.url}>
-            <Link href={link.url}>
-              <a className={styles.link} target="_blank" rel="noopener nofollow">
-                {link.title}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </Card>
+        <ul className={styles.list}>
+          {otherLinks.map((link) => (
+            <li key={link.url}>
+              <Link href={link.url}>
+                <a className={styles.link} target="_blank" rel="noopener nofollow">
+                  {link.title}
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Card>
+    </Container>
   </>
 );
 

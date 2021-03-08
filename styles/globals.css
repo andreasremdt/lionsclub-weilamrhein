@@ -47,9 +47,23 @@ li {
   font-weight: lighter;
 }
 
-.container {
-  width: 90rem;
-  width: clamp(16rem, 90vw, 80rem);
-  margin: auto;
-  padding: 0 1.5rem;
+blockquote {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: -3rem;
+  float: left;
+  width: 50%;
+}
+
+blockquote::before {
+  content: '\201C';
+  font-size: 40px;
+  line-height: 1;
+  float: left;
+}
+
+blockquote::after {
+  content: '\201D';
+  font-size: 40px;
+  line-height: 1;
+  vertical-align: top;
 }
