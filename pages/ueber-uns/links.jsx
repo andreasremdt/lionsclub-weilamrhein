@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Card from '../../components/card';
 import Breadcrumbs from '../../components/breadcrumbs';
 import Title from '../../components/title';
-import Container from '../../components/Container';
+import Container from '../../components/container';
 import styles from './links.module.css';
 
 const lionsLinks = [

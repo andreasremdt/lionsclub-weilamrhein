@@ -6,3 +6,15 @@
 .card:not(:last-child) {
   margin-bottom: 3rem;
 }
+
+@media (max-width: 1000px) {
+  .card {
+    padding: 3rem 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    padding: 2rem;
+  }
+}
