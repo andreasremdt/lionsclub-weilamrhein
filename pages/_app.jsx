@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
 import '../styles/globals.css';
+import '../styles/styles.css';
 
 function App({ Component, pageProps }) {
   return (
@@ -14,8 +15,13 @@ function App({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
         />
       </Head>
+
       <Navigation />
-      <Component {...pageProps} />
+
+      <main className="flex-1">
+        <Component {...pageProps} />
+      </main>
+
       <Footer />
     </>
   );

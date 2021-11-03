@@ -1,19 +1,7 @@
 import PropTypes from 'prop-types';
-import styles from './title.module.css';
 
-const Title = ({ Tag, children, className, underline, inverted, ...props }) => (
-  <Tag
-    className={[
-      styles.base,
-      styles[Tag],
-      underline ? styles.underline : null,
-      inverted ? styles.inverted : null,
-      className,
-    ].join(' ')}
-    {...props}
-  >
-    {children}
-  </Tag>
+const Title = ({ Tag, children, underline, inverted, ...props }) => (
+  <Tag {...props}>{children}</Tag>
 );
 
 Title.propTypes = {

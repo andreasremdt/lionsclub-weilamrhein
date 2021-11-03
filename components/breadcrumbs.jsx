@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import styles from './breadcrumbs.module.css';
 
 const Breadcrumbs = ({ entries }) => (
-  <nav className={styles.wrapper}>
+  <nav className="uppercase text-sm tracking-wider mb-4">
     {entries.map((entry, index) => {
       if (index < entries.length - 1) {
         return (
           <Link key={entry.href} href={entry.href}>
-            <a className={styles.entry}>{entry.title}</a>
+            <a className="text-blue mr-8 relative breadcrumb">{entry.title}</a>
           </Link>
         );
       }

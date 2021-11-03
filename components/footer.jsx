@@ -1,31 +1,42 @@
 import Link from 'next/link';
+
+import Container from './container';
 import Logo from './logo';
-import styles from './footer.module.css';
+
+const MENU_ITEMS = [
+  {
+    href: '/kontakt/',
+    name: 'Kontakt',
+  },
+  {
+    href: '/datenschutz/',
+    name: 'Datenschutz',
+  },
+  {
+    href: '/impressum/',
+    name: 'Impressum',
+  },
+  {
+    href: '/sitemap/',
+    name: 'Sitemap',
+  },
+];
 
 const Footer = () => (
-  <footer className={styles.wrapper}>
-    <div className="container">
-      <Logo variant="light" size="small" className={styles.logo} />
+  <footer className="bg-blue-dark text-white py-12 text-center mt-24">
+    <Container>
+      <Logo variant="light" size="small" className="mx-auto mb-6" />
 
-      <nav>
-        <Link href="/kontakt/">
-          <a className={styles.link}>Kontakt</a>
-        </Link>
-        <Link href="/datenschutz/">
-          <a className={styles.link}>Datenschutz</a>
-        </Link>
-        <Link href="/impressum/">
-          <a className={styles.link}>Impressum</a>
-        </Link>
-        <Link href="/sitemap/">
-          <a className={styles.link}>Sitemap</a>
-        </Link>
+      <nav className="mb-2">
+        {MENU_ITEMS.map((menuItem) => (
+          <Link href={menuItem.href} key={menuItem.href}>
+            <a className="font-light mx-4">{menuItem.name}</a>
+          </Link>
+        ))}
       </nav>
 
-      <p className={styles.copyright}>
-        &copy; {new Date().getFullYear()} Lions Club Weil am Rhein. Alle Rechte vorbehalten.
-      </p>
-    </div>
+      <p>&copy; {new Date().getFullYear()} Lions Club Weil am Rhein. Alle Rechte vorbehalten.</p>
+    </Container>
   </footer>
 );
 

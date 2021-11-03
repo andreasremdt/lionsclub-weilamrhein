@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
-import styles from './input.module.css';
 
 const Input = ({ Tag, type, label, id, error, ...props }) => (
-  <div className={styles.group}>
+  <div className="relative">
     {label && (
-      <label htmlFor={id} className={styles.label}>
-        {label} {props.required && <span className={styles.asterisk}>*</span>}
+      <label htmlFor={id} className="block mb-2">
+        {label} {props.required && <span className="text-gray-600">*</span>}
       </label>
     )}
     <Tag
       id={id}
       name={id}
       type={Tag != 'textarea' ? type : null}
-      className={styles.input}
+      className="min-h-12 border border-gray-300 rounded-md w-full resize-y px-4 py-2 font-light"
       {...props}
     />
-    {error && <p className={styles.error}>{error}</p>}
+    {error && (
+      <p className="text-red-500 text-xs bg-white px-1 absolute -bottom-2 left-4">{error}</p>
+    )}
   </div>
 );
 

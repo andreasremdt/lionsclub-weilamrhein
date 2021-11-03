@@ -58,6 +58,7 @@ const Page = () => {
           <form
             className={[styles.form, isSent ? styles.submitted : null].join(' ')}
             onSubmit={handleSubmit}
+            noValidate
           >
             <Input
               id="firstname"

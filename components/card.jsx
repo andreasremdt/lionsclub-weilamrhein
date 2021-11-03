@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import styles from './card.module.css';
+import cx from 'classnames';
 
 const Card = ({ Tag, children, className, ...props }) => (
-  <Tag className={[styles.card, className].join(' ')} {...props}>
+  <Tag className={cx('bg-white px-28 py-16', className)} {...props}>
     {children}
   </Tag>
 );

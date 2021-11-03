@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import styles from './container.module.css';
+import cx from 'classnames';
 
 const Container = ({ children, className, ...props }) => (
-  <div className={[styles.main, className].join(' ')} {...props}>
+  <div className={cx('container mx-auto', className)} {...props}>
     {children}
   </div>
 );
